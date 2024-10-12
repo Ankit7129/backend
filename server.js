@@ -15,6 +15,11 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+// Root route
+app.get('/', (req, res) => {
+  res.send('Welcome to the College Registration API');
+});
+
 // Import routes
 const studentRoutes = require('./routes/studentRoutes');
 const collegeRoutes = require('./routes/collegeRoutes');
